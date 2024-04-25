@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 
-mongoose.connect('mongodb+srv://<DB_USER_NAME>:<DB_PASSWORD>@cluster0-vatbg.mongodb.net/registrationFormHeruko?retryWrites=true&w=majority', {
+mongoose.connect('mongodb://localhost:27017/SpotifyDB', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }, (err) => {
@@ -34,7 +34,7 @@ app.use(session({
 }));
 
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');	
+app.set('view engine', 'ejs','js','png','mp3');	
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

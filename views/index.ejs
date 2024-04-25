@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Registration</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/utils.css">
+<link rel="stylesheet" href="./css/login.css">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
 	</script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="./css/main.css">
+<script src="https://kit.fontawesome.com/0e5b1e32b0.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="./css/style_new.css">
 
 
 	<script type="text/javascript">
-		$(document).ready(function(){
+		$(document).ready(function () {
 
-			$( "#form1" ).submit(function(event) {
+			$("#form1").submit(function (event) {
 				event.preventDefault();
 
 				$.ajax({
@@ -20,52 +24,77 @@
 					url: '/',
 					data: $('#form1').serialize(),
 					dataType: "json",
-					success: function(response){
+					success: function (response) {
 						//alert("a");
 						//console.log(response.Success);
 						$('#form1')[0].reset();
 
-						document.getElementById("check").innerHTML=response.Success;
-         					//ADD THIS CODE
-         					setTimeout(function(){
-         						document.getElementById("check").innerHTML="";
-         					},3000);
-         					if (response.Success=="You are regestered,You can login now.") {
-         						document.getElementById("aa").click();
-         					};
-         				},
-         				error: function() {
-         				}
-         			})
+						document.getElementById("check").innerHTML = response.Success;
+						//ADD THIS CODE
+						setTimeout(function () {
+							document.getElementById("check").innerHTML = "";
+						}, 3000);
+						if (response.Success == "You are regestered,You can login now.") {
+							document.getElementById("aa").click();
+						};
+					},
+					error: function () {
+					}
+				})
 			});
 		});
 	</script>
 </head>
-<body>
 
-	<div class="col-md-4 col-md-offset-4">
-		<div>
-			<p>Register Now
-			</p>
-		</div>
-		<div class="form-group">
-			<form id="form1" method="post">
-				<input type="email" name="email" placeholder="E-mail" required="" class="form-control"><br/>
-				<input type="text" name="username" placeholder="Username" required="" class="form-control"><br/>
-				<input type="password" name="password" placeholder="Password" required="" class="form-control"><br/>
-				<input type="password" name="passwordConf" placeholder="Confirm Password" required="" class="form-control"><br/>
-				<input type="submit" value="Register" class="btn btn-success">
-			</form>
-		</div>
-		
-		<div class="mssg bg-danger">
-			<span id="check"></span>
-		</div>
-		<div>
-			<span>Already Registered! <a href="/login">Login</a></span>
-		</div>
-		<div id="LangTable"><a href="/login" id="aa"></a>
-		</div>
+<body>
+	<header class="topbar">
+        <div class="logo-container">
+            <img src="./css/Spotify_LogoW.png" alt="Spotify Logo" class="logo">
+        </div>
+    </header>
+    <div class="login-container">
+        <div class="form-container">
+            <h1>Sign up to start listening</h1>
+			<br>
+            <hr>
+            <br>
+            <form id="form1" method="post">
+				<input type="email" name="email" placeholder="E-mail" class="input" required="">
+                <label for="username" class="creds">Username</label>
+                <input type="text" id="username" name="username" class="input" required>
+                <label for="password"class="creds">Password</label>
+                <input type="password" id="password" name="password" class="input" required>
+				<label for="passwordC"class="creds">Confirm Password</label>
+				<input type="password" id="passwordConf" name="passwordConf" class="input" required>
+                <input type="submit" value="Sign in" class="signup" name="Sign in">
+				<!-- <input type="button" value="Register"> -->
+            </form>
+            <div class="social-login">
+                <p>Or Sign in with</p>
+                <div class="social-buttons">
+                    <button class="google" class="icons"><i class="fa-brands fa-google"></i> Continue with Google</button>
+                    <button class="facebook" class="icons" ><i class="fa-brands fa-facebook"></i> Continue with Facebook</button>
+                    <button class="apple" class="icons"><i class="fa-brands fa-apple"></i> Continue with Apple</button>
+                </div>
+            </div>
+            <div class="signup-link">
+				<p>Already Registered? <a href="/login">Login</a></p>
+                <!-- <p>Don't have an account? <a href="#">Sign up for free</a></p> -->
+            </div>
+        </div>
+    </div>
+	
+	<span id="check"></span>
+	<span>Already Registered! <a href="/login">Login</a></span>
+	
+	
+
+
+	<!-- <div class="mssg bg-danger">
 	</div>
+	<div id="LangTable"><a href="/login" id="aa"></a>
+	</div> -->
+
 </body>
+
 </html>

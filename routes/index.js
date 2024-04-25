@@ -71,6 +71,7 @@ router.post('/login', function (req, res, next) {
 				req.session.userId = data.unique_id;
 				//console.log(req.session.userId);
 				res.send({"Success":"Success!"});
+				return res.render('data.ejs');
 				
 			}else{
 				res.send({"Success":"Wrong password!"});
@@ -90,7 +91,7 @@ router.get('/profile', function (req, res, next) {
 			res.redirect('/');
 		}else{
 			//console.log("found");
-			return res.render('data.ejs', {"name":data.username,"email":data.email});
+			return res.render('data.ejs');
 		}
 	});
 });

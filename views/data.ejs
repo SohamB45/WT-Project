@@ -1,29 +1,233 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Welcome</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-	</script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="./css/main.css">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/utils.css">
+    <link rel="stylesheet" href="./css/file.css">
+    <!-- <link rel="stylesheet" href="./css/login.css"> -->
+    <script src="https://kit.fontawesome.com/0e5b1e32b0.js" crossorigin="anonymous"></script>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> -->
+    </script>
+
+    <link rel="stylesheet" href="./css/style_new.css">
 </head>
+
 <body>
-	<div class="col-md-4 col-md-offset-4">
-		<div>
-			<p>Profile Detail</p>
-		</div>
-		<div>
-			<center>
-				<table class="table table-hover text-center">
-					<tr><td>Name </td><td><%= name %></td></tr>
-					<tr><td>Email </td><td><%= email %></td></tr>
-				</table>
-			</center>
-		</div>
-		<div class="abc">
-			<a href="/logout">Logout</a>
-		</div>
-	</div>
+    <div class="container flex black">
+        <div class="left mx-1 rounded ">
+
+            <div class="home mx-1 pd-1 rounded">
+                <div class="logo margin-top-left"><img src="./css/Spotify_LogoW.png" alt="logo"></div>
+                <ul class="margin-top-left">
+                    <li><i class="fa-solid fa-house"></i>Home</li>
+                    <li><i class="fa-solid fa-magnifying-glass"></i>Search</li>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div class="library mx-1 pd-1 rounded grey">
+                <div class="heading flex gap">
+                    <div class="libicon flex"><i class="fa-solid fa-layer-group"></i></div>
+                    <h2>Your Library</h2>
+                </div>
+                <div class="songs-list">
+                    <div class="lib-boxes hide">
+                        <div class="box">
+                            <p class="box-p1 pointer">Create your first playlist</p>
+                            <p class="box-p2 pointer">It's easy, we'll help you</p>
+                            <button class="badge scale transition pointer">Create playlist</button>
+                        </div>
+    
+                        <div class="box">
+                            <p class="box-p1 pointer">Let's find some podcasts to follow</p>
+                            <p class="box-p2 pointer">We'll keep you updated on new episodes</p>
+                            <button class="badge scale transition pointer">Browse podcasts</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <div class="right mx-1 rounded">
+<!-- navbar -->
+
+<div class="topbar">
+    <div class="prev-next-buttons">
+      <button type="button" class="fa fas fa-chevron-left"></button>
+      <button type="button" class="fa fas fa-chevron-right"></button>
+    </div>
+
+    <div class="navbar">
+          
+      <button type="button"><a class="logoutbtn" href="/logout">Log out</a></button>
+      <!-- <button type="button">Sign up</button> -->
+    </div>
+  </div>
+
+
+
+            <section class="mx-1">
+                <h1>Spotify Playlists</h1>  
+            </section>
+
+            <div class="songcontainer mx-1 ">
+                <div class="row1 flex">
+                    <div class="card">
+                        <div class="overlayer">
+                            <i class="far songitemPlay fa-play-circle  " id="0"> </i>
+                        </div>
+                        <img src="https://i.pinimg.com/736x/02/b8/94/02b894f7ea6ad9f724648ee511ad018f--edm-music-house-music.jpg"
+                            alt="" id="">
+                        <div class="title">
+                            <a href="#">Hover over</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="overlayer">
+                            <i class="far songitemPlay fa-play-circle  " id="1"> </i>
+                        </div>
+                        <img src="https://i.pinimg.com/736x/02/b8/94/02b894f7ea6ad9f724648ee511ad018f--edm-music-house-music.jpg"
+                            alt="">
+                        <div class="title">
+                            <a href="#">Hover over</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="overlayer">
+                            <i class="far songitemPlay fa-play-circle  "  id="2"></i>
+                        </div>
+                        <img src="https://i.pinimg.com/736x/02/b8/94/02b894f7ea6ad9f724648ee511ad018f--edm-music-house-music.jpg"
+                            alt="">
+                        <div class="title">
+                            <a href="#">Hover over</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="overlayer">
+                            <i class="far songitemPlay fa-play-circle  " id="3" ></i>
+                        </div>
+                        <img src="https://i.pinimg.com/736x/02/b8/94/02b894f7ea6ad9f724648ee511ad018f--edm-music-house-music.jpg"
+                            alt="">
+                        <div class="title">
+                            <a href="#">Hover over</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="overlayer">
+                            <i class="far songitemPlay fa-play-circle  " id="4" ></i>
+                        </div>
+                        <img src="https://i.pinimg.com/736x/02/b8/94/02b894f7ea6ad9f724648ee511ad018f--edm-music-house-music.jpg"
+                            alt="">
+                        <div class="title">
+                            <a href="#">Hover over</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row2 flex mx-1">
+                    <div class="card">
+                        <div class="overlayer">
+                            <i class="far songitemPlay fa-play-circle " id="5" ></i>
+                        </div>
+                        <img src="https://i.pinimg.com/736x/02/b8/94/02b894f7ea6ad9f724648ee511ad018f--edm-music-house-music.jpg"
+                            alt="">
+                        <div class="title">
+                            <a href="#">Hover over</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="playcard">
+                <div class="songinfo">
+                    <img id="playcardCover" src="" alt="" srcset="">
+                    <span id="masterSongName" class="songname">Perfect</span>
+                </div>
+                <div class="icons">
+                    <i class="fa-solid fa-backward-step fa-2x" id="previous"></i>
+                    <i class="fa-solid fa-play-circle fa-2x " id="masterPlay"></i>
+                    <i class="fa-solid fa-forward-step fa-2x" id="next"></i>
+                </div>
+                <input type="range" name="range" id="myProgress" min="0" max="100" value="0">
+
+
+            </div>
+
+            <div class="footer flex">
+                <div class="tablecontainer">
+                    <table class="table">
+                        <tr>
+                            <th>Company</th>
+                            <th>Community</th>
+                            <th>Useful Links</th>
+                        </tr>
+                        <tr>
+                            <td>About</td>
+                            <td>For artists</td>
+                            <td>Support</td>
+
+                        </tr>
+                        <tr>
+                            <td>Jobs</td>
+                            <td>Developers</td>
+                            <td>Free mobile app</td>
+                        </tr>
+                        <tr>
+                            <td>For the record</td>
+                            <td>Advertising</td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Investors</td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Vendors</td>
+                            <td> </td>
+                        </tr>
+
+                    </table>
+
+
+                </div>
+                <div class="icons">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-facebook"></i>
+
+
+
+
+
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>

@@ -2,12 +2,15 @@
 <html>
 <head>
 	<title>Login</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/utils.css">
+<link rel="stylesheet" href="./css/login.css">
+<script src="https://kit.fontawesome.com/0e5b1e32b0.js" crossorigin="anonymous"></script>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
 	</script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="./css/main.css">
 
+	<link rel="stylesheet" href="./css/style_new.css">
 	<script type="text/javascript">
 		$(document).ready(function(){
 
@@ -42,27 +45,53 @@
 	</script>
 </head>
 <body>
-	<div class="col-md-4 col-md-offset-4">
-		<div>
-			<p>Login</p>
-		</div>
-		<div class="form-group">
-			<form id="form" method="post" >
-				<input type="text" name="email" placeholder="E-mail" required="" class="form-control"><br/>
-				<input type="password" name="password" placeholder="Password" required="" class="form-control"><br/>
-				<input type="submit" value="Login" class="btn btn-success">
-			</form>
-		</div>
-		<div class="mssg bg-danger">
-			<span id="check" ></span>
-		</div>
+	<header class="topbar">
+        <div class="logo-container">
+            <img src="./css/Spotify_LogoW.png" alt="Spotify Logo" class="logo">
+        </div>
+    </header>
+    <div class="login-container">
+        <div class="form-container">
+            <h1>Log in to Spotify</h1>
+            <hr>
+            <br>
+            <form id="form" method="post">
+                <label for="Email" class="creds">Email</label>
+                <input type="text" name="email" placeholder="E-mail" required="" ><br/>
+                <label for="password"class="creds">Password</label>
+                <input type="password" id="password" name="password" required>
+				<!-- <input type="submit" value="Login" class="signup"> -->
+                <button type="submit" class="green" value="Login"><a class="login" href="/profile">Login</a></button>
+            </form>
+            <div class="social-login">
+                <p>Or log in with</p>
+                <div class="social-buttons">
+                    <button class="google" class="icons"><i class="fa-brands fa-google"></i> Continue with Google</button>
+                    <button class="facebook" class="icons" ><i class="fa-brands fa-facebook"></i> Continue with Facebook</button>
+                    <button class="apple" class="icons"><i class="fa-brands fa-apple"></i> Continue with Apple</button>
+                </div>
+            </div>
+            <div class="signup-link">
+                <p>Don't have an account? <a href="/">Sign up for free</a></p>
+            </div>
+        </div>
+    </div>
+
+
+	<span id="check" ></span>
+	<!-- <span><a href="/profile">Profile</a></span> -->
+	
+	
+	
+	<!-- <div class="mssg bg-danger">
 		<div id="LangTable"><a href="/profile" id="aa"></a>
+	</div>
 		</div>
 		<div><span>Do you forgot password?</span><a href="/forgetpass">Click here</a>
 		<div><span>Create a new Account?</span><a href="/">Register here</a>
 
-		</div>
+		</div> -->
 		
-	</div>
+	
 </body>
 </html>

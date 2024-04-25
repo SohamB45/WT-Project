@@ -1,0 +1,61 @@
+.container .left ul{
+    list-style-type: none;
+}
+
+.navbar ul{
+    list-style-type: none;
+    display: flex;
+    margin-left: 60vw;
+}
+
+.mx-1{
+    margin: 5px;
+}
+
+.padding{
+padding-top: 5px;
+}
+
+.margin-top-left{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.rounded{
+border-radius: 8px;
+}
+
+.grey{
+    background-color: #121212;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+}
+
+.gap{
+    gap: 10px;
+}
+
+.black{
+    background-color: black;
+}
+
+.flex-1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.library{
+    margin: 6px;
+    margin-top: 10px;
+    height: 84vh;
+    padding: 10px;
+}
+
+.pd-1{
+    padding: 5px;
+}
